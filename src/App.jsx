@@ -15,13 +15,31 @@ function App() {
 
   const chat = async (e, message) => {
     e.preventDefault();
-    
+
     if (!message) return;
     setIsTyping(true);
 
-    setChats([...chats, {role: "user", content: message}]);
+    setChats([...chats, { role: "user", content: message }]);
     setMessage("");
-  }
+
+    await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "system",
+          content: "You are a EbereGPT. You can help with graphic design tasks",
+        },
+        ...chats,
+      ],
+    }).then((res) => {
+      msgs.push(res.data.choices[0].message);
+      setChats(msgs);
+      setIsTyping(false);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
 
   return (
     <div>
