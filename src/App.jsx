@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  organization: "org-0nmrFWw6wSm6xIJXSbx4FpTw",
+  
   apiKey: "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",
 });
 
