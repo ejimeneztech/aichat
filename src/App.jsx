@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  
-  apiKey: "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",
+  apiKey: "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",
+  headers: {
+    "User-Agent": "MyApp/1.0" // Replace "MyApp/1.0" with an appropriate user agent string
+  }
 });
 
 const openai = new OpenAIApi(configuration);
@@ -15,19 +17,24 @@ function App() {
 
   const chat = async (e, message) => {
     e.preventDefault();
-
+    
     if (!message) return;
     setIsTyping(true);
 
-    setChats([...chats, { role: "user", content: message }]);
+    let msgs = chats;
+    msgs.push({ role: "user", content: message });
+    setChats(msgs);
+
     setMessage("");
 
-    await openai.createChatCompletion({
+    await openai
+    .createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
-          content: "You are a EbereGPT. You can help with graphic design tasks",
+          content:
+            "You are a CoolGPT. You assist users in a cool way and cool phrases.",
         },
         ...chats,
       ],
@@ -39,11 +46,25 @@ function App() {
     .catch((error) => {
       console.log(error);
     });
-  };
+
+  }
 
   return (
     <div>
-      <h1>AI Chat</h1>
+      <h1>KoolGPT</h1>
+      <section>
+        {chats && chats.length
+          ? chats.map((chat, index) => (
+              <p key={index} className={chat.role === "user" ? "user_msg" : ""}>
+                <span>
+                  <b>{chat.role.toUpperCase()}</b>
+                </span>
+                <span>:</span>
+                <span>{chat.content}</span>
+              </p>
+            ))
+          : ""}
+      </section>
       <div className={isTyping ? "" : "hide"}>
         <p>
           <i>{isTyping ? "Typing" : ""}</i>
@@ -61,4 +82,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
