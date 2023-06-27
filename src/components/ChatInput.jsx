@@ -1,3 +1,5 @@
+import './ChatInput.css';
+
 export default function ChatInput(props) {
   const handleSubmit = (e) => {
     e.preventDefault();

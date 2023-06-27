@@ -1,3 +1,5 @@
+import './ChatHistory.css';
+
 export default function ChatHistory(props) {
   return (
     <section>

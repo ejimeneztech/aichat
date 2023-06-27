@@ -1,0 +1,19 @@
+form {
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  input:focus {
+    outline: none;
+  }

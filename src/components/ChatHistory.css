@@ -1,0 +1,39 @@
+/* Update the chat bubble styles */
+p {
+  background-color: #f8f8f8;
+  max-width: 70%;
+  padding: 15px;
+  border-radius: 40px;
+  border-top: 2px solid #000000;
+  border-left: 4px solid #000000;
+  border-right: 2px solid #000000; /* Adjust thickness as desired */
+  border-bottom: 4px solid #000000; 
+  color: #000000;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add styles for the chat bubble span */
+p span {
+  display: inline-block;
+  margin: 5px;
+}
+
+/* Add styles for the user's message */
+.user_msg {
+  text-align: right;
+  margin-left: auto;
+  background-color: #cccccc;
+  border-color: #000000;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 4px solid #000000; /* Adjust thickness as desired */
+  border-bottom: 4px solid #000000; 
+}
+
+/* Add styles to hide messages */
+.hide {
+  visibility: hidden;
+  display: none;
+}

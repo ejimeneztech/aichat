@@ -6,7 +6,7 @@ import ChatInput from "./components/ChatInput";
 import Title from "./components/Title";
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
   headers: {
     "User-Agent": "MyApp/1.0", // Replace "MyApp/1.0" with an appropriate user agent string
   },
@@ -54,8 +54,8 @@ function App() {
   };
 
   return (
-    <div>
-      <Title title="KoolGPT"/>
+    <div className="main">
+      <Title title="KoolGPT" />
       <ChatHistory chats={chats} />
       <TypingIndicator condition={isTyping} />
       <ChatInput message={message} setMessage={setMessage} chat={chat} />
