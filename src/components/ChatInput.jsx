@@ -12,7 +12,7 @@ export default function ChatInput(props) {
         type="text"
         name="message"
         value={props.message}
-        placeholder="Type a message here and hit Enter..."
+        placeholder="Send a Message"
         onChange={(e) => props.setMessage(e.target.value)}
       />
     </form>

@@ -23,6 +23,7 @@ p span {
 /* Add styles for the user's message */
 .user_msg {
   text-align: right;
+  padding-right: 50px;
   margin-left: auto;
   background-color: #cccccc;
   border-color: #000000;
@@ -30,10 +31,32 @@ p span {
   border-left: 2px solid #000000;
   border-right: 4px solid #000000; /* Adjust thickness as desired */
   border-bottom: 4px solid #000000; 
+  
 }
+
 
 /* Add styles to hide messages */
 .hide {
   visibility: hidden;
   display: none;
+}
+
+.profile-thumbnail {
+  width: 30px; /* Adjust the width and height according to your design */
+  height: 30px;
+  border-radius: 50%; /* Make the image display as a circle */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  /* Add any additional styles as needed */
+}
+
+
+.user_msg .profile-thumbnail {
+  width: 30px; /* Adjust the width and height according to your design */
+  height: 30px;
+  border-radius: 50%; /* Make the image display as a circle */
+   /* Maintain aspect ratio and cover the container */
+  position: absolute;
+  bottom: 25px; /* Adjust the position of the thumbnail */
+  right: 15px; /* Adjust the position of the thumbnail */
+  z-index: 2;
 }

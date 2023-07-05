@@ -6,7 +6,7 @@ import ChatInput from "./components/ChatInput";
 import Title from "./components/Title";
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
   headers: {
     "User-Agent": "MyApp/1.0", // Replace "MyApp/1.0" with an appropriate user agent string
   },
