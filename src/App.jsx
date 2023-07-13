@@ -3,10 +3,11 @@ import { Configuration, OpenAIApi } from "openai";
 import ChatHistory from "./components/ChatHistory";
 import TypingIndicator from "./components/TypingIndicator";
 import ChatInput from "./components/ChatInput";
-import Title from "./components/Title";
+import Navbar from "./components/Navbar";
+
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
   headers: {
     "User-Agent": "MyApp/1.0", // Replace "MyApp/1.0" with an appropriate user agent string
   },
@@ -55,7 +56,7 @@ function App() {
 
   return (
     <div className="main">
-      <Title title="KoolGPT" />
+      <Navbar/>
       <ChatHistory chats={chats} />
       <TypingIndicator condition={isTyping} />
       <ChatInput message={message} setMessage={setMessage} chat={chat} />

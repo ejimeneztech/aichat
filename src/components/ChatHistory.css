@@ -1,13 +1,10 @@
 /* Update the chat bubble styles */
 p {
   background-color: #f8f8f8;
-  max-width: 70%;
-  padding: 15px;
-  border-radius: 40px;
-  border-top: 2px solid #000000;
-  border-left: 4px solid #000000;
-  border-right: 2px solid #000000; /* Adjust thickness as desired */
-  border-bottom: 4px solid #000000; 
+  max-width: fit-content; /* Adjust to fit the content width */
+  padding: 10px; /* Reduce the padding to decrease the empty space */
+  border-radius: 20px; /* Adjust the border radius as desired */
+  border: 2px solid #000000;
   color: #000000;
   font-family: sans-serif;
   position: relative;
@@ -30,10 +27,9 @@ p span {
   border-top: 2px solid #000000;
   border-left: 2px solid #000000;
   border-right: 4px solid #000000; /* Adjust thickness as desired */
-  border-bottom: 4px solid #000000; 
-  
+  border-bottom: 4px solid #000000;
+  position: relative; /* Add relative positioning */
 }
-
 
 /* Add styles to hide messages */
 .hide {
@@ -49,14 +45,20 @@ p span {
   /* Add any additional styles as needed */
 }
 
-
+/* Adjust the position of the thumbnail */
 .user_msg .profile-thumbnail {
-  width: 30px; /* Adjust the width and height according to your design */
-  height: 30px;
-  border-radius: 50%; /* Make the image display as a circle */
-   /* Maintain aspect ratio and cover the container */
   position: absolute;
-  bottom: 25px; /* Adjust the position of the thumbnail */
+  top: 50%; /* Adjust the position of the thumbnail vertically in the chat bubble */
+  transform: translateY(-50%); /* Center the thumbnail vertically */
   right: 15px; /* Adjust the position of the thumbnail */
   z-index: 2;
+}
+
+/* Adjust the position and alignment of the text beneath the User thumbnail */
+.user_msg span {
+  display: block; /* Display the text as a block element */
+  margin-top: 10px; /* Adjust the spacing between thumbnail and text */
+  text-align: left; /* Align the text to the left */
+  color: black; /* Set the text color to white */
+  white-space: normal; /* Allow wrapping within the text container */
 }
