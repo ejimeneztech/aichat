@@ -1,0 +1,12 @@
+.navbar {
+    background-color: rgb(74, 247, 74); /* Background color for the navbar */
+    color: #fff; /* Text color for the title */
+    text-align: center; /* Center-align the title */
+    padding: 10px 0; /* Add padding for spacing */
+    border-bottom: 4px solid #000000;
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    right: 0; /* Stick to the right */
+    position: fixed;
+    z-index: 100; 
+}

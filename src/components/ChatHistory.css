@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 /* Update the chat bubble styles */
 p {
   background-color: #f8f8f8;
@@ -6,7 +7,7 @@ p {
   border-radius: 20px; /* Adjust the border radius as desired */
   border: 2px solid #000000;
   color: #000000;
-  font-family: sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   position: relative;
   z-index: 1;
 }
@@ -61,4 +62,8 @@ p span {
   text-align: left; /* Align the text to the left */
   color: black; /* Set the text color to white */
   white-space: normal; /* Allow wrapping within the text container */
+}
+
+.chat-content {
+  margin-top: 100px; /* Adjust the margin-top value as needed */
 }

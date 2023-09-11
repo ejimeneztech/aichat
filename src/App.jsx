@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
   headers: {
     "User-Agent": "MyApp/1.0", // Replace "MyApp/1.0" with an appropriate user agent string
   },

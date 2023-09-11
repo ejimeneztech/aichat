@@ -4,7 +4,7 @@ import assistantThumbnail from "../assets/user.png"; // Path to assistant profil
 
 export default function ChatHistory(props) {
   return (
-    <section>
+    <section className="chat-content">
       {props.chats && props.chats.length
         ? props.chats.map((chat, index) => (
             <p key={index} className={chat.role === "user" ? "user_msg" : ""}>
