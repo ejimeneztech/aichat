@@ -38,4 +38,5 @@ input:hover {
 section {
   position: relative;
   z-index: 1; /* Adjust the z-index value to place the messages behind the chat input box */
+  
 }
